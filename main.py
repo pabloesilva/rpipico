@@ -10,7 +10,7 @@ led_rojo = Pin(14, Pin.OUT)
 def toggle(led):
     led.toggle()
 
-async def boton():
+async def boton(): #asigna una funcion al presionado del boton
     pin = Pin(28, Pin.IN, Pin.PULL_DOWN)  # Pushbutton to vcc
     pb = Pushbutton(pin)
     pb.press_func(toggle, (led_board,))  # Note how function and args are passed
